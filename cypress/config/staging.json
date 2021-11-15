@@ -1,0 +1,13 @@
+{
+    "baseUrl": "https://automationteststore.com",
+    "retries" : {
+        "runMode" : 1,
+        "openMode" : 1
+    },
+    "env": {
+      "first_name": "envName",
+      "automation_test_store_url": "https://automationteststore.com",
+      "webdriver_test_store_url": "http://www.webdriveruniversity.com"
+    }
+    
+  }

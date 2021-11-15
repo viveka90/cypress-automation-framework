@@ -1,0 +1,21 @@
+{
+  "baseUrl": "http://www.webdriveruniversity.com",
+  "pageLoadTimeout": 80000,
+  "defaultCommandTimeout": 6000,
+  "chromeWebSecurity": false,
+  "retries" : {
+      "runMode" : 1,
+      "openMode" : 1
+  },
+  "env": {
+    "first_name": "envName",
+    "automation_test_store_url": "https://automationteststore.com",
+    "webdriver_test_store_url": "http://www.webdriveruniversity.com"
+  },
+  "projectId": "eubhd1",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
+  
+}

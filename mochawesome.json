@@ -1,0 +1,280 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-14T20:43:11.122Z",
+    "end": "2021-11-14T20:45:53.740Z",
+    "duration": 25415,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bf486b40-64f3-4345-932a-d22a2e193dff",
+      "title": "",
+      "fullFile": "cypress/integration/webUniTest/checkbox.js",
+      "file": "cypress/integration/webUniTest/checkbox.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1a4ad858-d5f5-42e5-8e91-c92fa7a3f250",
+          "title": "Verify checkboxes via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check and validate checkbox",
+              "fullTitle": "Verify checkboxes via webdriveruni Check and validate checkbox",
+              "timedOut": null,
+              "duration": 2044,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.get('#checkboxes > :nth-child(1) > input').check()\n//cy.get('#checkboxes > :nth-child(1) > input').check().should('be.checked')\ncy.get('#checkboxes > :nth-child(1) > input').as('option-1'); //cy.get('@option-1').check();\ncy.get('@option-1').check().should('be.checked');",
+              "err": {},
+              "uuid": "33fb8c00-e63b-4b98-9e29-df34f5c9a4d8",
+              "parentUUID": "1a4ad858-d5f5-42e5-8e91-c92fa7a3f250",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Uncheck and validate checkbox",
+              "fullTitle": "Verify checkboxes via webdriveruni Uncheck and validate checkbox",
+              "timedOut": null,
+              "duration": 405,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(5) > input').as('option-3');\ncy.get('@option-3').uncheck().should('not.be.checked');",
+              "err": {},
+              "uuid": "4c803947-3e3b-492f-8619-057312b98d17",
+              "parentUUID": "1a4ad858-d5f5-42e5-8e91-c92fa7a3f250",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check mutiple checkboxes",
+              "fullTitle": "Verify checkboxes via webdriveruni Check mutiple checkboxes",
+              "timedOut": null,
+              "duration": 544,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"input[type='checkbox']\").check([\"option-1\", \"option-2\", \"option-3\", \"option-4\"]).should('be.checked');",
+              "err": {},
+              "uuid": "01a68c2f-632b-4ce9-b4d0-3e82f159a227",
+              "parentUUID": "1a4ad858-d5f5-42e5-8e91-c92fa7a3f250",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "33fb8c00-e63b-4b98-9e29-df34f5c9a4d8",
+            "4c803947-3e3b-492f-8619-057312b98d17",
+            "01a68c2f-632b-4ce9-b4d0-3e82f159a227"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2993,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "2ef543e0-c433-4dfe-9520-0249ab20d9ab",
+      "title": "",
+      "fullFile": "cypress/integration/webUniTest/contact-us.js",
+      "file": "cypress/integration/webUniTest/contact-us.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "433f1169-aef4-4bae-b396-8deea0497234",
+          "title": "Test Contact Us form via WebdriverUni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to submit a successful submission via contact us form",
+              "fullTitle": "Test Contact Us form via WebdriverUni Should be able to submit a successful submission via contact us form",
+              "timedOut": null,
+              "duration": 7187,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.document().should('have.property', 'charset').and('eq', 'UTF-8');\ncy.title().should('include', 'WebDriver | Contact Us');\ncy.url().should('include', 'contactus');\ncontactuspage_PO.contactFormSubmission(Cypress.env(\"first_name\"), data.last_name, data.email, \"How can I learn Cypress?\", 'h1', 'Thank You for your Message!');",
+              "err": {},
+              "uuid": "4375b8fd-ffb4-4f37-8958-260727fca9bc",
+              "parentUUID": "433f1169-aef4-4bae-b396-8deea0497234",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should not be able to submit a successful submission via contact us form as all fields are required",
+              "fullTitle": "Test Contact Us form via WebdriverUni Should not be able to submit a successful submission via contact us form as all fields are required",
+              "timedOut": null,
+              "duration": 3491,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "contactuspage_PO.contactFormSubmission(data.first_name, data.last_name, \" \", \"How can I learn Cypress?\", 'body', 'Error: Invalid email address');",
+              "err": {},
+              "uuid": "a1c5ba2f-0b6f-49f1-ad53-47b2e581f267",
+              "parentUUID": "433f1169-aef4-4bae-b396-8deea0497234",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4375b8fd-ffb4-4f37-8958-260727fca9bc",
+            "a1c5ba2f-0b6f-49f1-ad53-47b2e581f267"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10678,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4e4499ec-bd5c-430c-9ffa-4947d3f231c3",
+      "title": "",
+      "fullFile": "cypress/integration/AutoStoreTest/addProductsToBasket.js",
+      "file": "cypress/integration/AutoStoreTest/addProductsToBasket.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5aa2002c-21eb-4b52-b0b7-8746518155fc",
+          "title": "add product test group",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "add multiple product to basket",
+              "fullTitle": "add product test group add multiple product to basket",
+              "timedOut": null,
+              "duration": 11744,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// globalThis.data.product_name.forEach((element) => {\n//     autoStore_HairCarePage_PO.addProductToBasket(element)\n// });\n// autoStore_HairCarePage_PO.clickOnShoppingKart()\nautoStore_HairCarePage_PO.completeHairCarePageOperation();",
+              "err": {},
+              "uuid": "55fe7702-b593-47c1-b504-05f37b509963",
+              "parentUUID": "5aa2002c-21eb-4b52-b0b7-8746518155fc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "55fe7702-b593-47c1-b504-05f37b509963"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11744,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
