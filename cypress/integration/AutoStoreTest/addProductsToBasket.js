@@ -11,7 +11,7 @@ describe('add product test group', () => {
         autoStore_HomePage_PO.visitHomePage()
         autoStore_HomePage_PO.clickOnHairCareProduct();
     })
-    it('add multiple product to basket', {
+    it('add multiple Product to basket', {
         retries : {
             runMode : 1,
             openMode : 2
