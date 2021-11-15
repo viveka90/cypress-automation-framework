@@ -5,6 +5,4 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          install-command: yarn install --frozen-lockfile
-          verify-command: npx cypress verify
-          spec: cypress/integration/AutoStoreTest*
+          yarn: true
