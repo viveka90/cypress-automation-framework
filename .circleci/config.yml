@@ -5,7 +5,4 @@ workflows:
   build:
     jobs:
       - cypress-io/run:
-          install-command: yarn install --frozen-lockfile
-          verify-command: npx cypress verify
-          browser: chrome
           spec: cypress/integration/AutoStoreTest*
