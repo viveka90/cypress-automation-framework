@@ -1,7 +1,7 @@
 class AutoStore_HomePage_PO {
     visitHomePage(){
-        //cy.visit(Cypress.env("automation_test_store_url"))
-        cy.visit('/')
+        cy.visit(Cypress.env("automation_test_store_url"))
+        //cy.visit('/')
     }
     
     clickOnHairCareProduct(){
