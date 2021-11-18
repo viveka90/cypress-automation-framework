@@ -17,7 +17,8 @@
     "delete-mocha-report": "rm -rf mochawesome-report/* || true",
     "prerun" : "npm run delete-all-reports && npm run delete-mocha-report",
     "staging-open" : "npx cypress open --config-file cypress/config/staging.json",
-    "run-autostore-test-dashboard" : "npx cypress run --spec cypress/integration/AutoStoreTest/* --record --key 72ba9792-bf20-4d16-ae18-e17526026eb0"
+    "run-autostore-test-dashboard" : "npx cypress run --spec cypress/integration/AutoStoreTest/* --record --key 72ba9792-bf20-4d16-ae18-e17526026eb0",
+    "run-autostore-with-report" : "npm run prerun && npm run runalltests-autostore && npm run merge-mocha"
   },
   "author": "Vivek Anbalagan",
   "license": "ISC",
