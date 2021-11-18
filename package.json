@@ -6,6 +6,7 @@
   "scripts": {
     "runalltests-headed": "npx cypress run --headed",
     "runalltests-webunittest": "npx cypress run --spec cypress/integration/webUniTest/*",
+    "runalltests-autostore": "npx cypress run --spec cypress/integration/AutoStoreTest/*",
     "delete-all-junit-reports": "rm cypress/results/junit/* || true",
     "delete-all-reports": "rm cypress/results/* || true",
     "merge-junit": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
