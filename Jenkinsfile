@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     tools {nodejs "node"}
-    
+
     stages {
-        stage('cypress parallel test suite') {
-            paralles{
-                stage('Slave Node1'){
-                    agent{
+        stage('Cypress Parallel Test Suite') {
+            parallel {
+                stage('Slave Node1') {
+                    agent {
                         label "remote_node1"
                     }
                     steps {
@@ -17,8 +17,8 @@ pipeline {
                         bat 'npm run run-autostore-test-dashboard-parallel'
                     }
                 }
-                stage('Slave Node2'){
-                    agent{
+                stage('Slave Node2') {
+                    agent {
                         label "remote_node2"
                     }
                     steps {
