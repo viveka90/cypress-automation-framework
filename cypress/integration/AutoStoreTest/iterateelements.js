@@ -12,7 +12,7 @@ describe("Iterate over elements", () => {
           cy.log("Index: " + index + " : " + $el.text())
       });
     });
-    it("Add specific product to basket", () => {
+    it("Add specific product to basket",{browser: chrome}, () => {
   
     //   cy.get(".fixed_wrapper .prdocutname").each(($el, index, $list) => {
     //       if($el.text().includes('Curls to straight Shampoo')) {
@@ -22,10 +22,6 @@ describe("Iterate over elements", () => {
     cy.selectProduct('Curls to straight Shampoo')
     });
 
-    it("Add Seaweed Conditioner to basket", () => {
-    
-      cy.selectProduct('Seaweed Conditioner')
-      });
     
   });
   
