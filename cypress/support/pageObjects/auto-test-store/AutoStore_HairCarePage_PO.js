@@ -5,6 +5,7 @@ class AutoStore_HairCarePage_PO {
             if ($el.text() === productName) {
                 cy.log($el.text())
                 cy.get('.productcart').eq(index).click();
+                cy.screenshot()
             }
         });
     }
@@ -21,6 +22,7 @@ class AutoStore_HairCarePage_PO {
             })
         })
         cy.get('.dropdown-toggle > .fa').click()
+        cy.screenshot()
     }
 }
 export default AutoStore_HairCarePage_PO
